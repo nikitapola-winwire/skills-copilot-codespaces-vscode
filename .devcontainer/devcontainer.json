@@ -1,11 +1,14 @@
+
 {
-    // Name this configuration
     "name": "Codespace for Skills!",
-    "customizations": {
-        "vscode": {
-            "extensions": [
-                "GitHub.copilot"
-            ]
-        }
+  "image": "mcr.microsoft.com/vscode/devcontainers/python:3.10",
+  "postCreateCommand": "pip install -r requirements.txt",
+  "forwardPorts": [8000],
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+      }
     }
+  }
 }
